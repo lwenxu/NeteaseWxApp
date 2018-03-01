@@ -1,0 +1,19 @@
+<import src="../../../utils/pl.wxml" />
+<import src="../../../utils/image.wxml" />
+<view>
+  <view class="playlist" wx:if="{{!loading}}">
+    <view class="sm_title">我创建的歌单
+    </view>
+    <template is="pl" data="{{list:list1}}" />
+    <text class="sm_title">我收藏的歌单
+    </text>
+    <template is="pl" data="{{list:list2}}" />
+  </view>
+  <view wx:else class="cntloading">加载中...
+    <view>
+      <text class="cl1"></text>
+      <text class="cl2"></text>
+      <text class="cl3"></text>
+    </view>
+  </view>
+</view>
